@@ -1,0 +1,677 @@
+/* ===================================================================
+   Abdallah Ali - Portfolio Stylesheet
+   Exact visual match for nourmansour.com:
+   - Crisp white background with subtle blueprint technical grid
+   - Authentic Thmanyah (ثمانية) Arabic typography
+   - Signature dark forest green (#1d3327) & white pill buttons
+   - Square hero portrait (aspect-ratio 1:1) with subtle B&W monochrome filter
+   - Frosted glass floating overlay with "سنتين خبرة" (no fake numbers)
+   - Single flagship showcase: منصة نواة (Nawah Platform)
+   =================================================================== */
+
+@import url('https://cdn.jsdelivr.net/npm/@dawod/thmanyah-font-web/index.css');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Exact color scheme from nourmansour.com */
+  --bg-page: #ffffff;
+  --bg-grid-line: rgba(0, 0, 0, 0.045);
+  --bg-card: #ffffff;
+  --bg-card-subtle: #f9fafb;
+  --bg-dark-btn: #1d3327;          /* Nour's signature dark forest green */
+  --bg-dark-btn-hover: #132219;
+
+  --text-heading: #111827;         /* Crisp deep black/charcoal */
+  --text-body: #4b5563;            /* Balanced modern grey */
+  --text-muted: #6b7280;           /* Subtle secondary text */
+  --text-accent: #1d3327;
+
+  --border-light: #e5e7eb;
+  --border-card: #e5e7eb;
+
+  --radius-pill: 9999px;
+  --radius-card: 24px;
+  --radius-sm: 12px;
+
+  /* Thmanyah Typography */
+  --font-arabic: 'Thmanyah Sans', 'Thmanyah Serif Text', system-ui, -apple-system, sans-serif;
+  --font-display: 'Thmanyah Serif Display', 'Thmanyah Sans', system-ui, sans-serif;
+  --font-latin: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-arabic);
+  background-color: var(--bg-page);
+  /* Technical Grid Pattern like nourmansour.com */
+  background-image: 
+    linear-gradient(to right, var(--bg-grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--bg-grid-line) 1px, transparent 1px);
+  background-size: 34px 34px;
+  color: var(--text-heading);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings font */
+h1, h2, h3, .brand-title, .hero-main-title, .section-headline {
+  font-family: var(--font-display);
+}
+
+/* --- Navigation Bar --- */
+.nm-navbar {
+  background-color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 1rem 0;
+  transition: all 0.25s ease;
+}
+
+.nm-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  color: var(--text-heading);
+}
+
+.nm-brand-badge {
+  background-color: var(--bg-dark-btn);
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.nm-brand-name {
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.4px;
+}
+
+.nm-nav-link {
+  color: var(--text-heading);
+  font-weight: 600;
+  font-size: 0.98rem;
+  padding: 0.5rem 1rem !important;
+  text-decoration: none;
+  transition: color 0.15s ease;
+  position: relative;
+}
+
+.nm-nav-link:hover,
+.nm-nav-link.active {
+  color: var(--bg-dark-btn);
+}
+
+/* --- Pill Buttons (Exact Nour Mansour Style) --- */
+.btn-pill-dark {
+  background-color: var(--bg-dark-btn);
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.7rem 1.6rem;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(29, 51, 39, 0.18);
+}
+
+.btn-pill-dark:hover {
+  background-color: var(--bg-dark-btn-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(29, 51, 39, 0.28);
+}
+
+.btn-pill-outline {
+  background-color: #ffffff;
+  color: var(--text-heading) !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.7rem 1.6rem;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  border: 1px solid #111827;
+  transition: all 0.2s ease;
+}
+
+.btn-pill-outline:hover {
+  background-color: #f3f4f6;
+  transform: translateY(-2px);
+  border-color: #000;
+}
+
+.btn-pill-secondary {
+  background-color: #f3f4f6;
+  color: var(--text-heading) !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.55rem 1.2rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-light);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.btn-pill-secondary:hover {
+  background-color: #e5e7eb;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  padding: 6.5rem 0 4.5rem;
+  position: relative;
+}
+
+.hero-badge-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 1.25rem;
+}
+
+.hero-pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
+  animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); }
+  70% { transform: scale(1); box-shadow: 0 0 0 7px rgba(34, 197, 94, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+.hero-main-title {
+  font-size: clamp(2.3rem, 4.5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+  color: var(--text-heading);
+  margin-bottom: 1rem;
+}
+
+.hero-tagline {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.3px;
+}
+
+.hero-desc-text {
+  font-size: 1.08rem;
+  color: var(--text-body);
+  line-height: 1.75;
+  max-width: 580px;
+  margin-bottom: 2.2rem;
+}
+
+/* Hero Square Photo Card & Floating Stats Bar */
+.hero-photo-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 1 / 1; /* User requested: square photo */
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--border-light);
+  background-color: #f3f4f6;
+  margin: 0 auto;
+}
+
+.hero-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  /* User requested monochrome like Nour's image */
+  filter: grayscale(100%) contrast(1.04);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.hero-photo-wrapper:hover .hero-photo-img {
+  filter: grayscale(0%) contrast(1);
+  transform: scale(1.02);
+}
+
+/* The exact floating frosted glass overlay from nourmansour.com */
+.hero-stats-overlay {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  right: 14px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+/* User requested: "عليها برضه سنتين خبرة، وبلاش عليها أرقام، مش عايز عليها أرقام" */
+.stat-item-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.stat-item-badge i {
+  color: var(--bg-dark-btn);
+  font-size: 1rem;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 26px;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+/* --- Tech Strip (Matching Nour's Partners strip) --- */
+.tech-strip {
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  background-color: #ffffff;
+  padding: 2rem 0;
+}
+
+.tech-strip-title {
+  font-weight: 800;
+  font-size: 1.15rem;
+  margin-bottom: 0.2rem;
+  color: var(--text-heading);
+}
+
+.tech-strip-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+.tech-strip-link:hover {
+  color: var(--bg-dark-btn);
+}
+
+.tech-badge-item {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #374151;
+  padding: 0.5rem 1rem;
+  background-color: #f9fafb;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.tech-badge-item:hover {
+  background-color: #ffffff;
+  border-color: #94a3b8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.tech-badge-item i {
+  font-size: 1.1rem;
+  color: var(--bg-dark-btn);
+}
+
+/* --- Section Layout --- */
+.section-tagline {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.section-headline {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+  color: var(--text-heading);
+  margin-bottom: 0.6rem;
+}
+
+.section-subtext {
+  color: var(--text-body);
+  font-size: 1.05rem;
+  max-width: 620px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+/* --- Services Cards (What I Offer) --- */
+.nm-feature-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-card);
+  padding: 2.5rem;
+  height: 100%;
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.nm-feature-card:hover {
+  transform: translateY(-4px);
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 28px -4px rgba(0, 0, 0, 0.08);
+}
+
+.feature-card-icon {
+  width: 52px;
+  height: 52px;
+  background-color: #f1f5f9;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: var(--bg-dark-btn);
+  margin-bottom: 1.4rem;
+}
+
+.feature-card-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  margin-bottom: 0.65rem;
+  color: var(--text-heading);
+}
+
+.feature-card-desc {
+  font-size: 0.98rem;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+.checklist-clean {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+
+.checklist-clean li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  padding: 0.65rem 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.checklist-clean li:last-child {
+  border-bottom: none;
+}
+
+.check-bullet {
+  width: 20px;
+  height: 20px;
+  background-color: #ecfdf5;
+  color: #059669;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  flex-shrink: 0;
+}
+
+/* --- Featured Project (Nawah Platform Showcase) --- */
+.nawah-showcase-box {
+  background-color: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: 0 10px 32px -4px rgba(0, 0, 0, 0.07);
+}
+
+.nawah-img-wrapper {
+  padding: 1.5rem;
+  background-color: #f8fafc;
+  border-left: 1px solid var(--border-light);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 991px) {
+  .nawah-img-wrapper {
+    border-left: none;
+    border-top: 1px solid var(--border-light);
+  }
+}
+
+.nawah-img-cover {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  display: block;
+}
+
+.nawah-badge {
+  background-color: #f1f5f9;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.35rem 0.95rem;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.nawah-quote {
+  background-color: #f9fafb;
+  border-right: 3px solid var(--bg-dark-btn);
+  padding: 0.85rem 1.15rem;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 1.4rem;
+  line-height: 1.6;
+}
+
+.nawah-feature-chip {
+  background-color: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+.nawah-feature-chip i {
+  color: var(--bg-dark-btn);
+  font-size: 1.05rem;
+}
+
+/* --- Contact & Forms --- */
+.contact-card-clean {
+  background-color: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-card);
+  padding: 2.5rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+.form-label-clean {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text-heading);
+  margin-bottom: 0.45rem;
+  display: block;
+}
+
+.form-input-clean {
+  background-color: #f9fafb;
+  border: 1px solid var(--border-light);
+  color: var(--text-heading);
+  border-radius: 12px;
+  padding: 0.85rem 1.1rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.form-input-clean:focus {
+  background-color: #ffffff;
+  border-color: var(--bg-dark-btn);
+  box-shadow: 0 0 0 3px rgba(29, 51, 39, 0.1);
+  outline: none;
+}
+
+.contact-info-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1rem 1.2rem;
+  background-color: #f9fafb;
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: var(--text-heading);
+  transition: all 0.2s ease;
+}
+
+.contact-info-pill:hover {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  color: var(--bg-dark-btn);
+}
+
+.contact-pill-icon {
+  width: 42px;
+  height: 42px;
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--bg-dark-btn);
+  flex-shrink: 0;
+}
+
+/* --- Footer --- */
+.nm-footer-clean {
+  border-top: 1px solid var(--border-light);
+  background-color: #ffffff;
+  padding: 2.5rem 0;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+/* --- CV / Resume Modal --- */
+.resume-modal-content {
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border-card);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.resume-modal-header {
+  border-bottom: 1px solid var(--border-light);
+  padding: 1.2rem 1.8rem;
+  background-color: #f9fafb;
+}
+
+.resume-section-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  border-bottom: 2px solid var(--bg-dark-btn);
+  padding-bottom: 0.35rem;
+  margin-bottom: 0.85rem;
+  display: inline-block;
+}
+
+/* Print styles for CV */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #cvModal, #cvModal * {
+    visibility: visible;
+  }
+  #cvModal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  .modal-footer, .btn-close {
+    display: none !important;
+  }
+}

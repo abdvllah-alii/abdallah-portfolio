@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عبدالله علي — مطور برمجيات وويب | Abdallah Ali</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="الموقع الشخصي للمطور عبدالله علي - مطور برمجيات وتطبيقات ويب متكاملة، ومطور منصة نواة لإدارة مشروعات التخرج والفرق الطلابية.">
+  <meta name="author" content="Abdallah Ali">
+  <meta name="keywords" content="عبدالله علي, مطور ويب, Full-Stack Developer, منصة نواة, Bootstrap 5, Portfolio, تصميم مواقع">
+
+  <!-- Thmanyah Font (Official CDN Web Package) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@dawod/thmanyah-font-web/index.css">
+
+  <!-- Bootstrap 5 RTL CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Custom Stylesheet (Exact Nour Mansour Style & Grid Canvas) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== القائمة العلوية (NAVBAR) ==================== -->
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top nm-navbar" id="mainNav">
+      <div class="container">
+        <a class="nm-brand" href="#home" id="brandLink">
+          <span class="nm-brand-badge">ع</span>
+          <span class="nm-brand-name">عبدالله علي</span>
+        </a>
+        
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="تبديل القائمة">
+          <i class="bi bi-list fs-2 text-dark"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item"><a class="nm-nav-link active" href="#home" id="navHome">الرئيسية</a></li>
+            <li class="nav-item"><a class="nm-nav-link" href="#services" id="navServices">ماذا أقدم؟</a></li>
+            <li class="nav-item"><a class="nm-nav-link" href="#project" id="navProject">منصة نواة</a></li>
+            <li class="nav-item"><a class="nm-nav-link" href="#stack" id="navStack">التقنيات</a></li>
+            <li class="nav-item"><a class="nm-nav-link" href="#contact" id="navContact">تواصل معي</a></li>
+          </ul>
+          
+          <div class="d-flex align-items-center mt-3 mt-lg-0">
+            <a href="#contact" class="btn-pill-dark" id="navGetInTouch">
+              <i class="bi bi-chat-dots-fill"></i> تواصل معي
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==================== الواجهة الرئيسية (HERO SECTION) ==================== -->
+  <main>
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          
+          <!-- تفاصيل ومقدمة المطور -->
+          <div class="col-lg-7 text-center text-lg-start order-2 order-lg-1">
+            <div class="hero-badge-status">
+              <span class="hero-pulse-dot"></span>
+              <span>متاح للمشاريع والتعاون البرمجي</span>
+            </div>
+
+            <h1 class="hero-main-title">
+              عبدالله علي — مطور برمجيات وويب
+            </h1>
+
+            <h2 class="hero-tagline">
+              بناء مواقع ومنصات رقمية متكاملة بفكر هندسي يخدم أهدافك
+            </h2>
+
+            <p class="hero-desc-text">
+              أقوم بتطوير وبناء مواقع وتطبيقات ويب سريعة، مريحة، وعالية الأداء. أركز على كتابة كود نظيف وتجربة مستخدم متقنة، ومطور <strong>منصة نواة</strong> لمساعدة الطلاب والفرق الأكاديمية على تنظيم وإدارة مشروعات التخرج والمهام البرمجية بكفاءة.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+              <a href="#contact" class="btn-pill-dark" id="heroBtnContact">
+                <i class="bi bi-chat-dots-fill"></i> تواصل معي
+              </a>
+              <a href="#project" class="btn-pill-outline" id="heroBtnProject">
+                استعرض منصة نواة <i class="bi bi-arrow-up-left"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- الصورة الشخصية المربعة وشريط الإحصائيات العائم (بدون أرقام وبأناقة الرمادي) -->
+          <div class="col-lg-5 text-center order-1 order-lg-2">
+            <div class="hero-photo-wrapper">
+              <img src="assets/images/avatar.jpg" alt="عبدالله علي - مطور برمجيات وويب" class="hero-photo-img" id="heroAvatarImg">
+              
+              <!-- الشريط الزجاجي العائم على الصورة (كما طلب المستخدم: بدون أرقام مبالغ فيها ومع إبراز سنتين خبرة) -->
+              <div class="hero-stats-overlay">
+                <div class="stat-item-badge">
+                  <i class="bi bi-clock-history"></i>
+                  <span>سنتين خبرة</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item-badge">
+                  <i class="bi bi-code-slash"></i>
+                  <span>مطور Full-Stack</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item-badge">
+                  <i class="bi bi-lightning-charge-fill"></i>
+                  <span>منصة نواة الحية</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== شريط التقنيات والأدوات (TECH STRIP) ==================== -->
+    <section id="stack" class="tech-strip">
+      <div class="container">
+        <div class="row align-items-center g-3">
+          <div class="col-lg-3 text-center text-lg-start">
+            <h3 class="tech-strip-title mb-0">التقنيات الأساسية</h3>
+          </div>
+          <div class="col-lg-9">
+            <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-end">
+              <span class="tech-badge-item"><i class="bi bi-wordpress"></i> WordPress</span>
+              <span class="tech-badge-item"><i class="bi bi-code-square"></i> React / Next.js</span>
+              <span class="tech-badge-item"><i class="bi bi-github"></i> Git & GitHub</span>
+              <span class="tech-badge-item"><i class="bi bi-database"></i> SQL & Supabase</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ماذا أقدم؟ (WHAT I OFFER) ==================== -->
+    <section id="services" class="py-5">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="section-tagline">ماذا أقدم؟</span>
+          <h2 class="section-headline">خدمات برمجية ترتكز على الجودة والأداء</h2>
+          <p class="section-subtext">أساعد الأفراد والشركات في تحويل الأفكار إلى واجهات ومنصات ويب تفاعلية عالية الكفاءة وسهلة الاستخدام.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- البطاقة الأولى: تطوير الواجهات -->
+          <div class="col-md-6">
+            <div class="nm-feature-card">
+              <div class="feature-card-icon">
+                <i class="bi bi-laptop"></i>
+              </div>
+              <h3 class="feature-card-title">تطوير وتصميم مواقع الويب (Web Development)</h3>
+              <p class="feature-card-desc">
+                بناء صفحات ومواقع ويب سريعة الاستجابة، مصممة بأعلى معايير تجربة المستخدم وموافقة لأحدث تقنيات الويب العالمية.
+              </p>
+              <ul class="checklist-clean">
+                <li>
+                  <span class="check-bullet"><i class="bi bi-check-lg"></i></span>
+                  <span>تصميم متجاوب بالكامل 100% مع الهواتف الذكية والشاشات الكبيرة</span>
+                </li>
+                <li>
+                  <span class="check-bullet"><i class="bi bi-check-lg"></i></span>
+                  <span>كود HTML5 & CSS3 نظيف، منظم، ومتوافق مع المعايير القياسية</span>
+                </li>
+                <li>
+                  <span class="check-bullet"><i class="bi bi-check-lg"></i></span>
+                  <span>استخدام Bootstrap 5 لبناء شبكات وتخطيطات مرنة ومتسقة</span>
+                </li>
+                <li>
+                  <span class="check-bullet"><i class="bi bi-check-lg"></i></span>
+                  <span>تحسين سرعة التحميل ومراعاة متطلبات محركات البحث (SEO Friendly)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- البطاقة الثانية: المنصات والتطبيقات -->
+          <div class="col-md-6">
+            <div class="nm-feature-card">
+              <div class="feature-card-icon">
+                <i class="bi bi-layers-half"></i>
+              </div>
+              <h3 class="feature-card-title">بناء المنصات والأنظمة المتكاملة (Platforms & Apps)</h3>
+              <p class="feature-card-desc">
+                هندسة تطبيقات الويب التفاعلية والأنظمة الإدارية مع توفير إدارة فعالة للبيانات والتزامن المباشر بين المستخدمين.
+              </p>
+              <ul class="checklist-clean">
+                <li>
+                  <span class="check-bullet"><i class="bi bi-check-lg"></i></span>
+                  <span>لوحات تحكم تفاعلية (Interactive Kanban Boards & Dashboards)</span>
+                </li>
+                <li>
+                  <span class="check-bullet"><i class="bi bi-check-lg"></i></span>
+                  <span>مزامنة البيانات الحية واللحظية بين أعضاء الفريق (Live Realtime Sync)</span>
+                </li>
+                <li>
+                  <span class="check-bullet"><i class="bi bi-check-lg"></i></span>
+                  <span>تكامل آمن مع قواعد البيانات والأنظمة السحابية (Cloud & Databases)</span>
+                </li>
+                <li>
+                  <span class="check-bullet"><i class="bi bi-check-lg"></i></span>
+                  <span>توثيق برمجي شامل وإدارة الإصدارات باحترافية عبر Git & GitHub</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== المشروع المميز (منصة نواة) ==================== -->
+    <section id="project" class="py-5 bg-white">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="section-tagline">المشروع المميز</span>
+          <h2 class="section-headline">منصة نواة (Nawah Platform)</h2>
+          <p class="section-subtext">المنصة العربية الرقمية المخصصة لتنظيم وإدارة مشروعات التخرج والفرق الأكاديمية</p>
+        </div>
+
+        <div class="nawah-showcase-box">
+          <div class="row g-0 align-items-center">
+            
+            <!-- وصف وتفاصيل المنصة -->
+            <div class="col-lg-6 p-4 p-lg-5">
+              <div class="mb-3">
+                <span class="nawah-badge">
+                  <i class="bi bi-patch-check-fill text-success"></i>
+                  منصة سحابية حية متكاملة
+                </span>
+              </div>
+
+              <!-- التوضيح الصريح المطلوب من المستخدم -->
+              <div class="nawah-quote">
+                <i class="bi bi-info-circle-fill text-dark me-1"></i>
+                <strong>توضيح:</strong> منصة نواة ليست مشروع تخرج خاص بي، بل هي منصة مبتكرة تم تطويرها لمساعدة الطلاب وفرق العمل على تنظيم وإدارة وتوثيق مشروعات التخرج خطوة بخطوة.
+              </div>
+
+              <p class="text-muted mb-4" style="line-height: 1.8;">
+                تم تصميم منصة <strong>نواة</strong> لتسد فجوة تنظيمية كبيرة يعاني منها آلاف الطلاب الجامعيين سنوياً. توفر المنصة بيئة تعاونية موحدة تجمع بين لوحات إدارة المهام، التوثيق الأكاديمي، وتتبع المواعيد النهائية بسلاسة.
+              </p>
+
+              <!-- مزايا المنصة كـ Chips -->
+              <div class="row g-2 mb-4">
+                <div class="col-sm-6">
+                  <div class="nawah-feature-chip">
+                    <i class="bi bi-kanban"></i>
+                    <span>لوحة كانبان تفاعلية</span>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="nawah-feature-chip">
+                    <i class="bi bi-arrow-repeat"></i>
+                    <span>مزامنة حية وفورية</span>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="nawah-feature-chip">
+                    <i class="bi bi-people"></i>
+                    <span>توزيع أدوار الفريق</span>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="nawah-feature-chip">
+                    <i class="bi bi-folder-check"></i>
+                    <span>مركز المستندات والملفات</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- زر زيارة المنصة -->
+              <div>
+                <a href="https://nawah-graduation.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-pill-dark" id="btnVisitNawah">
+                  <i class="bi bi-box-arrow-up-right"></i> زيارة منصة نواة الحية
+                </a>
+              </div>
+            </div>
+
+            <!-- صورة ومعاينة المنصة -->
+            <div class="col-lg-6">
+              <div class="nawah-img-wrapper">
+                <img src="assets/images/nawah.jpg" alt="معاينة واجهة منصة نواة" class="nawah-img-cover" id="nawahMockupImg">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== تواصل معي (CONTACT SECTION) ==================== -->
+    <section id="contact" class="py-5">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="section-tagline">تواصل معي</span>
+          <h2 class="section-headline">دعنا نبدأ في تنفيذ فكرتك القادمة</h2>
+          <p class="section-subtext">سواء كنت بحاجة إلى موقع إلكتروني، منصة ويب متطورة، أو استشارة برمجية، أنا جاهز دائماً للنقاش والتعاون.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-xl-7">
+            
+            <!-- نموذج إرسال الرسالة المباشرة -->
+            <div class="contact-card-clean mb-4">
+              <h3 class="fs-4 fw-bold mb-4 text-center">أرسل رسالة مباشرة</h3>
+              
+              <form id="contactForm" action="https://formsubmit.co/abdallah.ali.business@gmail.com" method="POST" novalidate>
+                <!-- FormSubmit Configuration -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_subject" value="📩 رسالة جديدة عبر موقع Portfolio">
+                
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="contactName" class="form-label-clean">الاسم الكريم <span class="text-danger">*</span></label>
+                    <input type="text" class="form-input-clean" id="contactName" name="name" placeholder="مثال: أحمد محمد" required>
+                    <div class="invalid-feedback text-danger small mt-1" id="nameError">يرجى كتابة الاسم.</div>
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <label for="contactEmail" class="form-label-clean">البريد الإلكتروني <span class="text-danger">*</span></label>
+                    <input type="email" class="form-input-clean" id="contactEmail" name="email" placeholder="name@example.com" required style="direction: ltr; text-align: right;">
+                    <div class="invalid-feedback text-danger small mt-1" id="emailError">يرجى إدخال بريد إلكتروني صحيح.</div>
+                  </div>
+                  
+                  <div class="col-12">
+                    <label for="contactSubject" class="form-label-clean">موضوع الرسالة <span class="text-danger">*</span></label>
+                    <input type="text" class="form-input-clean" id="contactSubject" name="subject" placeholder="بشأن مشروع جديد / استفسار برمجى" required>
+                    <div class="invalid-feedback text-danger small mt-1" id="subjectError">يرجى تحديد الموضوع.</div>
+                  </div>
+                  
+                  <div class="col-12">
+                    <label for="contactMessage" class="form-label-clean">نص الرسالة <span class="text-danger">*</span></label>
+                    <textarea class="form-input-clean" id="contactMessage" name="message" rows="5" placeholder="اكتب تفاصيل طلبك أو فكرة مشروعك هنا..." required></textarea>
+                    <div class="invalid-feedback text-danger small mt-1" id="messageError">يرجى كتابة تفاصيل الرسالة.</div>
+                  </div>
+                  
+                  <div class="col-12">
+                    <button type="submit" class="btn-pill-dark w-100 justify-content-center py-3" id="btnSubmitContact">
+                      <i class="bi bi-send-fill"></i> إرسال الرسالة الآن
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+              <!-- تنبيه نجاح الإرسال -->
+              <div id="formSuccessAlert" class="alert alert-success d-none mt-3 rounded-3" role="alert">
+                <i class="bi bi-check-circle-fill me-2"></i>
+                تم إرسال رسالتك بنجاح! سيتم التواصل معك عبر البريد الإلكتروني في أقرب وقت.
+              </div>
+            </div>
+
+            <!-- بطاقة التواصل المباشر (تحت لوحدها) -->
+            <div class="text-center">
+              <a href="mailto:abdallah.ali.business@gmail.com" class="contact-info-pill d-inline-flex justify-content-center align-items-center px-4 py-3 shadow-sm" id="contactEmailLink">
+                <div class="contact-pill-icon">
+                  <i class="bi bi-envelope-at-fill"></i>
+                </div>
+                <div class="text-start">
+                  <div class="small text-muted fw-bold">أو تواصل مباشرة عبر البريد الإلكتروني المهني:</div>
+                  <div class="fw-bold text-dark fs-6" style="direction: ltr; text-align: left;">abdallah.ali.business@gmail.com</div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== التذييل (FOOTER) ==================== -->
+  <footer class="nm-footer-clean text-center">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-center gap-3 mb-3">
+        <a href="#home" class="text-decoration-none text-muted">الرئيسية</a>
+        <span>•</span>
+        <a href="#services" class="text-decoration-none text-muted">الخدمات</a>
+        <span>•</span>
+        <a href="#project" class="text-decoration-none text-muted">منصة نواة</a>
+        <span>•</span>
+        <a href="#contact" class="text-decoration-none text-muted">تواصل</a>
+        <span>•</span>
+        <a href="https://github.com/abdvllah-alii" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-muted">GitHub</a>
+      </div>
+      
+      <p class="mb-1 text-muted small">
+        © 2026 عبدالله علي — مطور برمجيات وويب. مبني بأحدث معايير HTML5, CSS3 & Bootstrap 5.
+      </p>
+      <p class="mb-0 text-muted small">
+        البريد المعتمد: <a href="mailto:abdallah.ali.business@gmail.com" class="text-dark fw-bold text-decoration-none">abdallah.ali.business@gmail.com</a>
+      </p>
+    </div>
+  </footer>
+
+
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Main Custom Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
